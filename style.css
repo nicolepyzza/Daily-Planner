@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+h1 {
+  color: #a77ba9 !important;
+}
+
 textarea{
   background: transparent;
   border: none;
@@ -20,7 +24,7 @@ textarea{
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid #a77ba9;
 }
 
 .description{
@@ -51,12 +55,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #a77ba9;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #dec4df;
   color: white;
 }
 
