@@ -11,16 +11,16 @@ var timeIndex;
 var currentDiv;
 
 // On load function
-$(window).on("load", function(){
+$(window).on("load", function () {
     // Call clockUpdate function and refresh every second
     setInterval('clockUpdate()', 1000);
 
     // Function that will grab any previously saved data in local storage and display
     // it on screen in the appropriate textareas.
-    function getApptInfo(){
+    function getApptInfo() {
         retrievedAppt = JSON.parse(localStorage.getItem('appts'));
         if (retrievedAppt !== null) {
-            for (i=0; i<retrievedAppt.length; i++) {
+            for (i = 0; i < retrievedAppt.length; i++) {
                 showAppt = retrievedAppt[i];
                 details = showAppt.details;
                 timeIndex = showAppt.time;
@@ -38,7 +38,7 @@ $(window).on("load", function(){
 });
 
 // For each div, compare div id to the current hour and assign the appropriate CSS class
-for (i=0; i<23; i++) {
+for (i = 0; i < 23; i++) {
     currentDiv = i;
     if (currentHour == i) {
         $('#' + currentDiv).addClass('present');
@@ -57,7 +57,7 @@ function clockUpdate() {
 
 // On click for each save button, save the data of each text area AND
 // the id of the textarea div to local storage as an array.
-$(".saveBtn").on("click", function(){
+$(".saveBtn").on("click", function () {
     //get textarea's value
     text = $(this).parent('div').children('div').children('textarea').val();
     timeID = $(this).parent('div').children('div').children('textarea').attr('id');
